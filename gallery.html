@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      .hover:hover {
+        box-shadow: 0px 0px 20px rgb(114, 8, 180);
+        transform: scale(1.04);
+        transition: 0.5s;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-body .btn {
+        margin-top: auto;
+      }
+      .nav-item:hover {
+        background-color: #752e98;
+        font-weight: bold;
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+
+      .btn {
+        background-color: #b143e8;
+      }
+
+      .btn:hover {
+        background-color: #752e98;
+        box-shadow: 0px 0px 5px black;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <!--===============================
+                    Navbar
+        ===============================-->
+    <nav
+      class="navbar navbar-expand-lg shadow p-3"
+      style="background-color: #b143e8"
+    >
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1 text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-sunrise-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707m11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M11.709 11.5a4 4 0 1 0-7.418 0H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+          Environatural
+        </span>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-white active shadow fw-bold"
+              style="background-color: rgb(89, 64, 147)"
+              aria-current="page"
+              href="gallery.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-file-image-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 0h8a2 2 0 0 1 2 2v8.293l-2.73-2.73a1 1 0 0 0-1.52.127l-1.889 2.644-1.769-1.062a1 1 0 0 0-1.222.15L2 12.292V2a2 2 0 0 1 2-2m4.002 5.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"
+                />
+                <path
+                  d="M10.564 8.27 14 11.708V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-.293l3.578-3.577 2.56 1.536 2.426-3.395z"
+                />
+              </svg>
+              Gallery</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--===============================
+                    GALLERY
+        ===============================-->
+    <section class="min-vh-100">
+      <div class="container-fluid pt-3 mt-5">
+        <h1 class="ms-5">
+          GALLERY
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="currentColor"
+            class="bi bi-grid-1x2-fill"
+            viewBox="0 0 16 16"
+            style="color: #b143e8"
+          >
+            <path
+              d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"
+            />
+          </svg>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4 p-4">
+          <!--1 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic1.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">River 1</h5>
+                <p class="card-text">A beutiful river and a relaxing image.</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--2 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic2.avif" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Plain 1</h5>
+                <p class="card-text">A grassy field image.</p>
+
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Go somewhere</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--3 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic3.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Mount 1</h5>
+                <p class="card-text">On the top has a nice view.</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--4 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic4.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">flower field 1</h5>
+                <p class="card-text">
+                  The scent of flowers is strong in this image.
+                </p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--5 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic5.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">flower field 2</h5>
+                <p class="card-text">
+                  The scent of flowers is strong in this image.
+                </p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--6 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic6.webp" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">River 2</h5>
+                <p class="card-text">A beutiful river and a relaxing image.</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--7 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic7.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">River 3</h5>
+                <p class="card-text">A beutiful river and a relaxing image.</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--8 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic8.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">River 4</h5>
+                <p class="card-text">A beutiful river and a relaxing image.</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--9 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic9.webp" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">River 5</h5>
+                <p class="card-text">A beutiful river and a relaxing image.</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--10 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic10.webp" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Snow 1</h5>
+                <p class="card-text">this place is cold and has a nice view.</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--11 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic11.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Snow 2</h5>
+                <p class="card-text">this place is cold and has a nice view</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--12 card-->
+          <div class="col">
+            <div class="card hover h-100">
+              <img src="img/pic12.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Snow 2</h5>
+                <p class="card-text">this place is cold and has a nice view</p>
+                <a href="#" class="btn btn-primary"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                    />
+                  </svg>
+                  Check out</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===============================
+                    MODAL
+        ===============================-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">River 1</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/pic1.png" class="card-img-top" alt="" />
+            <p>A Beutiful river and a relaxing img</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
