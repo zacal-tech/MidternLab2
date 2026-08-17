@@ -47,6 +47,15 @@
         transform: scale(1.04);
         transition: 0.5s;
       }
+
+      .carousel {
+        height: 50%;
+        width: 50%;
+      }
+
+      .carousel-img {
+        height: 400px;
+      }
     </style>
   </head>
   <body>
@@ -100,10 +109,10 @@
             <a class="nav-link text-white" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Categories</a>
+            <a class="nav-link text-white" href="#category">Categories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
+            <a class="nav-link text-white" href="#contact">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#contact">Contact</a>
@@ -224,41 +233,179 @@
     </section>
 
     <!--===============================
-                    Contact
+                    Catgory
         ===============================-->
-    <section class="bg-white p-5" id="contact">
-      <div class="container p-5">
-        <h4>CONTACT US ON:</h4>
-        <a style="text-decoration: none" class="fw-bold text-black" href="">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="bi bi-facebook text-primary"
-            viewBox="0 0 16 16"
+
+    <section class="vh-100 bg-white" id="category">
+      <div class="container">
+        <h1 class="text-center fw-bold mb-4 pt-5">
+          Explore Nature <span style="color: #b143e8">.</span>
+        </h1>
+
+        <p class="text-center text-muted mb-4">
+          Discover beautiful places through our gallery
+        </p>
+
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide mx-auto"
+          style="max-width: 900px"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/pic8.jpeg"
+                class="carousel-img w-100"
+                alt="Forest"
+              />
+
+              <div class="carousel-caption">
+                <h5>Beautiful Forest</h5>
+                <p>Experience the calm and beauty of nature.</p>
+                <a href="gallery.html" class="btn check-btn">
+                  Check It Out →
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="img/pic4.jpeg"
+                class="carousel-img w-100"
+                alt="Flower Fields"
+              />
+
+              <div class="carousel-caption">
+                <h5>Flower Fields</h5>
+                <p>A colorful landscape filled with beautiful flowers.</p>
+                <a href="gallery.html" class="btn check-btn">
+                  Check It Out →
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/pic10.webp" class="carousel-img w-100" alt="Snow" />
+
+              <div class="carousel-caption">
+                <h5>Snowy Mountains</h5>
+                <p>Explore the peaceful beauty of a winter landscape.</p>
+                <a href="gallery.html" class="btn check-btn">
+                  Check It Out →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
           >
-            <path
-              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
-            />
-          </svg>
-          FACEBOOK </a
-        ><br />
-        <a style="text-decoration: none" class="fw-bold text-black" href="">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="bi bi-twitter-x"
-            viewBox="0 0 16 16"
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
           >
-            <path
-              d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
-            />
-          </svg>
-          TWITTER
-        </a>
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--===============================
+                    footer
+        ===============================-->
+    <section class="p-5" id="contact" style="background-color: #b143e8">
+      <div class="container-fluid p-5">
+        <div class="row">
+          <!-- CONTACT -->
+          <div class="col-md-6">
+            <h4 class="text-white fw-bold mb-4">CONTACT US ON:</h4>
+
+            <a
+              style="text-decoration: none"
+              class="fw-bold text-white"
+              href="#"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-facebook text-primary"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                />
+              </svg>
+              FACEBOOK
+            </a>
+
+            <br />
+
+            <a
+              style="text-decoration: none"
+              class="fw-bold text-white"
+              href="#"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-twitter-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                />
+              </svg>
+              TWITTER
+            </a>
+          </div>
+
+          <!-- ABOUT -->
+          <div class="col-md-6">
+            <h4 class="text-white fw-bold mb-4">ABOUT US:</h4>
+
+            <p class="text-white">
+              Welcome to our environment gallery. Our website showcases
+              beautiful landscapes, forests, rivers, mountains, and other
+              natural scenery.
+            </p>
+
+            <p class="text-white">
+              Explore our gallery and discover the beauty of nature.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <script
